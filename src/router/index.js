@@ -159,6 +159,22 @@ export const constantRoutes = [
     ]
   },
 
+  {
+    path: '/charts',
+    component: Layout,
+    redirect: '/charts/simple-bar-chart',
+    name: 'Charts',
+    meta: { title: 'Charts', icon: 'example' },
+    children: [
+      {
+        path: 'simple-bar-chart',
+        name: 'SimpleBarChart',
+        component: () => import('@/views/charts/simple-bar-chart/index'),
+        meta: { title: 'Simple Bar Chart', icon: 'table' }
+      }
+    ]
+  },
+
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }
 ]
@@ -172,7 +188,7 @@ const createRouter = () => new Router({
 const router = createRouter()
 
 // Detail see: https://github.com/vuejs/vue-router/issues/1234#issuecomment-357941465
-export function resetRouter() {
+export function resetRouter () {
   const newRouter = createRouter()
   router.matcher = newRouter.matcher // reset router
 }
