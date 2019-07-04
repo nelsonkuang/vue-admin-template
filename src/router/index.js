@@ -91,6 +91,21 @@ export const constantRoutes = [
   },
 
   {
+    path: '/component-demos',
+    component: Layout,
+    redirect: '/component-demos/tinymce',
+    meta: { title: 'Component Demos', icon: 'example' },
+    children: [
+      {
+        path: 'tinymce',
+        name: 'TinymceDemo',
+        component: () => import('@/views/component-demos/tinymce'),
+        meta: { title: 'Tinymce Demo', icon: 'form' }
+      }
+    ]
+  },
+
+  {
     path: '/nested',
     component: Layout,
     redirect: '/nested/menu1',
