@@ -15,6 +15,8 @@ export default {
     }
   },
   mounted () {
+    // Reference from: https://www.cnblogs.com/xufeikko/p/9956765.html
+    // 在区间段内展示连续数据
     const colors = ['#4f81bd', '#c0504d', '#9bbb59', '#604a7b']
     const bar = this.$refs.bar
     const echartsObj = echarts.init(bar)

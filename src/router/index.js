@@ -186,6 +186,12 @@ export const constantRoutes = [
         name: 'SimpleBarChart',
         component: () => import('@/views/charts/simple-bar-chart/index'),
         meta: { title: 'Simple Bar Chart', icon: 'table' }
+      },
+      {
+        path: 'simple-bar-chart-ii',
+        name: 'SimpleBarChartII',
+        component: () => import('@/views/charts/simple-bar-chart-ii/index'),
+        meta: { title: 'Simple Bar Chart II', icon: 'table' }
       }
     ]
   },
